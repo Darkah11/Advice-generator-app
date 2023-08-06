@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "manrope", Arial, Helvetica, sans-serif;
+}
+body { 
+    background-color: hsl(218, 23%, 16%);
+    height: 100vh;
+    padding: 0 20px;
+    position: relative;
+}
+.advice-box {
+    background-color: hsl(217, 19%, 24%);
+    max-width: 500px;
+    min-width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 20px 100px;
+    border-radius: 10px;
+    text-align: center;
+}
+.advice-box::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 60px);
+    height: 20px;
+    background: url(images/pattern-divider-mobile.svg) no-repeat center;
+    background-size: contain;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+h2 {
+    color: hsl(150, 100%, 66%);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+.text {
+    color: hsl(193, 38%, 86%);
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.5;
+    opacity: 0;
+}
+.fade {
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+.random-btn {
+   height: 60px;
+   width: 60px;
+   position: absolute;
+   bottom: -30px;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+   border-radius: 50%;
+   border: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: hsl(150, 100%, 66%);
+   cursor: pointer;
+}
+.random-btn:hover {
+    box-shadow: 10px 0px 10px hsl(150, 100%, 66%, 0.2), -10px 0px 10px hsl(150, 100%, 66%, 0.2), 0px 10px 10px hsl(150, 100%, 66%,0.2), 0px -10px 10px hsl(150, 100%, 66% ,0.2);
+}
+
+@media (min-width: 700px) {
+    .advice-box {
+        min-width: 500px;
+    }
+    .advice-box::before {
+        background: url(images/pattern-divider-desktop.svg) no-repeat center;
+        background-size: contain;
+    }
+
+}
